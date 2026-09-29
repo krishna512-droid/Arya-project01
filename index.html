@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PS-10 | Multi-Agent Web & API Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <div class="badge">HACKATHON • PS-10</div>
+        <h1>Multi-Agent Autonomous Web & API Explorer</h1>
+        <p>Enter a goal. The browser-based agents plan, explore public APIs, collect web data, and generate a compact report.</p>
+      </div>
+      <div class="status-pill"><span class="dot"></span> GitHub Pages Ready</div>
+    </header>
+
+    <main>
+      <section class="card goal-card">
+        <label for="goal">Your Goal</label>
+        <div class="input-row">
+          <input id="goal" type="text" value="Find information about Python and GitHub" placeholder="e.g. Compare Python and JavaScript..." />
+          <button id="runBtn">Run Explorer</button>
+        </div>
+        <div class="examples">
+          <button class="example">Find information about Python</button>
+          <button class="example">Explore GitHub repositories for AI</button>
+          <button class="example">Search Wikipedia for blockchain</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card agent-card">
+          <div class="card-title"><span class="icon">🧠</span><h2>Planner Agent</h2></div>
+          <div id="planBox" class="agent-output muted">Waiting for a goal...</div>
+        </div>
+
+        <div class="card agent-card">
+          <div class="card-title"><span class="icon">🌐</span><h2>Web Agent</h2></div>
+          <div id="webBox" class="agent-output muted">Waiting...</div>
+        </div>
+
+        <div class="card agent-card">
+          <div class="card-title"><span class="icon">⚡</span><h2>API Agent</h2></div>
+          <div id="apiBox" class="agent-output muted">Waiting...</div>
+        </div>
+
+        <div class="card agent-card">
+          <div class="card-title"><span class="icon">📊</span><h2>Analyst Agent</h2></div>
+          <div id="analysisBox" class="agent-output muted">Waiting...</div>
+        </div>
+      </section>
+
+      <section class="card report-card">
+        <div class="card-title">
+          <span class="icon">📄</span>
+          <h2>Final Report</h2>
+          <button id="copyBtn" class="small-btn">Copy</button>
+        </div>
+        <div id="report" class="report muted">Run the explorer to generate a report.</div>
+      </section>
+    </main>
+
+    <footer>
+      <span>PS-10 Demo • HTML + CSS + JavaScript</span>
+      <span>No backend required • Works on GitHub Pages</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
